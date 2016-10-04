@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -422,6 +423,27 @@ template {
 [hidden] {
   display: none; }
 
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*!
+ * Andy.SCSS: Open-Source Collection of Useful SASS Mixins Library.
+   URL: http://gillesbertaux.com/andy$
+   Repository: https://github.com/gillesbertaux/andy
+   By: Gilles Bertaux | http://gillesbertaux.com | @gillesbertaux
+   The purpose of Andy is to gather useful mixins and avoid endless research
+   or heavy framework use. Feel free to fork it on Github and add your own mixins:
+*/
+/*!
+ * # Media Queries with superpowers 
+   [![Build Status](https://api.travis-ci.org/sass-mq/sass-mq.svg?branch=master)]
+   (https://travis-ci.org/sass-mq/sass-mq) 
+   `mq()` is a [Sass](http://sass-lang.com/ "Sass - Syntactically Awesome
+   Stylesheets") mixin that helps you compose media queries in an elegant
+   way.
+ */
 .row {
   *zoom: 1; }
   .row:before, .row:after {
@@ -808,87 +830,6 @@ template {
 
   .col-lg-1 {
     width: 8.33333333%; } }
-/* common. used by all components. 
-   ========================================================================== */
-.lrbg1 {
-  background-color: #999; }
-
-.lrbg2 {
-  background-color: green; }
-
-.lrbg3 {
-  background-color: #ccc; }
-
-/* imgbox1 */
-.imgbox1 {
-  background-color: #ccc;
-  width: 100%;
-  border: 1px solid #000;
-  padding: 6px; }
-  .imgbox1 > img {
-    width: 100%; }
-
-/* buttons */
-.btn {
-  background-color: green;
-  border: 1px solid #000;
-  display: inline-block;
-  color: #fff; }
-
-.btn-sm {
-  font-size: 12px;
-  height: 20px; }
-
-.btn-md {
-  border-radius: 6px;
-  height: 30px; }
-
-.btn-lg {
-  border-radius: 6px;
-  height: 40px; }
-
-.btn-nudge {
-  margin-left: 6px; }
-
-/* tabs */
-.tab-container {
-  background-color: #ccc;
-  height: 36px;
-  width: 100%;
-  padding-top: 2px;
-  border-bottom: 1px solid #000; }
-
-.tab {
-  display: inline-block;
-  background-color: #999;
-  border: 1px solid #000;
-  border-radius: 6px 6px 0px 0px;
-  /* tl tr br bl */
-  height: 34px;
-  /* trbl */
-  padding: 6px 6px 6px 6px; }
-
-.tab-active {
-  border-bottom-style: none; }
-
-/* img-holder */
-.img-holder {
-  width: 100%;
-  padding: 4px;
-  border: 1px solid #000; }
-  .img-holder > img {
-    width: 100%;
-    margin-bottom: -2px; }
-
-.p--indent {
-  text-indent: 50px; }
-
-/* other */
-.img-circle {
-  border-radius: 50%; }
-
-/* end of common stuff
-   ========================================================================== */
 .row {
   *zoom: 1; }
   .row:before, .row:after {
@@ -954,9 +895,41 @@ template {
     z-index: 4;
     top: 0px;
     left: 100%; } }
-[class|="col"] {
-  position: relative;
-  min-height: 1px;
-  border: 1px solid #000; }
+body:before {
+  background-color: #FCF8E3;
+  border-bottom: 1px solid #FBEED5;
+  border-left: 1px solid #FBEED5;
+  color: #C09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+  @media (min-width: 20em) {
+    body:before {
+      content: "mobile ≥ 320px (20em)"; } }
+  @media (min-width: 30em) {
+    body:before {
+      content: "mobileLandscape ≥ 480px (30em)"; } }
+  @media (min-width: 37.5em) {
+    body:before {
+      content: "smallTabletPortrait ≥ 600px (37.5em)"; } }
+  @media (min-width: 50em) {
+    body:before {
+      content: "smallTabletLandscape ≥ 800px (50em)"; } }
+  @media (min-width: 46.25em) {
+    body:before {
+      content: "tabletPortrait ≥ 740px (46.25em)"; } }
+  @media (min-width: 64em) {
+    body:before {
+      content: "tabletLandscape ≥ 1024px (64em)"; } }
+  @media (min-width: 62em) {
+    body:before {
+      content: "desktop ≥ 992px (62em)"; } }
+  @media (min-width: 75em) {
+    body:before {
+      content: "wide ≥ 1200px (75em)"; } }
 
 /*# sourceMappingURL=main.css.map */
