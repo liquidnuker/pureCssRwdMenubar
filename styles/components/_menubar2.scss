@@ -1,0 +1,97 @@
+/* components/_menubar2.scss
+   =================================================*/
+
+.menubar2 {
+  border: 2px solid green;
+  display: block;
+  position: relative;
+
+  li {
+    padding: 10px 0px 10px 0px;
+    background-color: #666;
+    text-align: center;
+    position: relative;
+    }
+
+  a {
+    display: block;
+    color: #fff;
+  }
+}
+
+
+
+// menubar2 mq mixins
+// ==================================================/
+@mixin menubar2_sub_320 {
+  .menubar2 .menubar2_itemB {
+    // hide items
+    // *1: if display:none is not supported;
+    left: -9999em; // *1
+    display: none;
+    a {
+      background-color: pink;
+    }
+  }
+
+  .menubar2 .menubar2_itemB2 {
+    left: -9999em; // *1
+    display: none;
+    a {
+      background-color: brown;
+    }
+  }
+
+  .menubar2 .menubar2_itemB3 {
+    left: -9999em; // *1
+    display: none;
+    a {
+      background-color: green;
+    }
+  }
+
+  // show items
+
+
+  .menubar2 .menubar2_itemB_toggle:hover > .menubar2_itemB,
+  .menubar2 .menubar2_itemB2_toggle:hover > .menubar2_itemB2,
+  .menubar2 .menubar2_itemB3_toggle:hover > .menubar2_itemB3 {
+    display: block;
+  }
+
+} // end @mixin menubar2_sub_320
+
+@mixin menubar2_sub_768 {
+  .menubar2 .menubar2_itemB_toggle:hover > .menubar2_itemB {
+    display: block;
+    top: 100%;
+    left: auto;
+    z-index: 4;
+    width: 100%;
+    position: absolute;
+  }
+
+  .menubar2 .menubar2_itemB2_toggle:hover > .menubar2_itemB2,
+  .menubar2 .menubar2_itemB3_toggle:hover > .menubar2_itemB3 {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  top: 0px;
+  left: 100%;
+  }
+} // end @mixin menubar2_sub_768
+
+/* menubar2 media queries (vendor/_mq.scss)
+   =================================================*/
+// mobile portrait (320x480) 
+@include mq($from: mobile) {
+  @include menubar2_sub_320;
+}
+
+// tablet portrait (768x1024)
+@include mq($from: tabletPortrait) {
+  @include menubar2_sub_768;
+}
+
+
