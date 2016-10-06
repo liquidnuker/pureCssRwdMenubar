@@ -49,16 +49,16 @@
   }
 
   // show items
-  .menubar2 .menubar2_itemB_toggle:hover > .menubar2_itemB,
-  .menubar2 .menubar2_itemB2_toggle:hover > .menubar2_itemB2,
-  .menubar2 .menubar2_itemB3_toggle:hover > .menubar2_itemB3 {
+  .menubar2 .menubar2_itemB--toggle:hover > .menubar2_itemB,
+  .menubar2 .menubar2_itemB2--toggle:hover > .menubar2_itemB2,
+  .menubar2 .menubar2_itemB3--toggle:hover > .menubar2_itemB3 {
     display: block;
   }
 
 } // end @mixin menubar2_sub_320
 
 @mixin menubar2_sub_768 {
-  .menubar2 .menubar2_itemB_toggle:hover > .menubar2_itemB {
+  .menubar2 .menubar2_itemB--toggle:hover > .menubar2_itemB {
     display: block;
     top: 100%;
     left: auto;
@@ -67,8 +67,8 @@
     position: absolute;
   }
 
-  .menubar2 .menubar2_itemB2_toggle:hover > .menubar2_itemB2,
-  .menubar2 .menubar2_itemB3_toggle:hover > .menubar2_itemB3 {
+  .menubar2 .menubar2_itemB2--toggle:hover > .menubar2_itemB2,
+  .menubar2 .menubar2_itemB3--toggle:hover > .menubar2_itemB3 {
   display: inline-block;
   width: 100%;
   position: absolute;
